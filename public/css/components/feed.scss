@@ -1,0 +1,85 @@
+.feed {
+  margin: 0 auto;
+  width: 50%;
+  position: relative;
+  top: 5vh;
+
+  .feed-input {
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    padding: 20px;
+    background: transparent;
+    box-shadow: 8px 8px 10px #d1d9e6, -8px -8px 10px #fafafa;
+    font-size: 24px;
+    transition: all 0.3s ease-in;
+    clear: both;
+  }
+  .feed-input:hover {
+    box-shadow: 8px 8px 15px #d1d9e6, -8px -8px 15px #fafafa;
+  }
+  .feed-input:focus {
+    background-color: #ffffff;
+  }
+  .post-btn {
+    position: absolute;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px #d1d9e6, -3px -3px 10px #fafafa;
+    border: none;
+    transition: all 0.2s ease-in-out;
+  }
+  .post-btn:active {
+    box-shadow: inset -3px -3px 7px #fafafa, inset 3px 3px 5px #d1d9e6;
+  }
+
+  .post {
+    margin-top: 90px;
+    padding: 20px;
+    width: 100%;
+    min-height: 150px;
+    border-radius: 25px;
+    box-shadow: 8px 8px 10px #d1d9e6, -8px -8px 10px #fafafa;
+    position: relative;
+    transition: all 0.4s ease-in;
+  }
+
+  .post:hover {
+    box-shadow: 6px 5px 12px #d1d9e6, -6px -5px 13px #fafafa;
+  }
+
+  .pst-usr-avatar {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: coral;
+  }
+  .pst-time {
+    display: inline-block;
+    position: absolute;
+    top: 75px;
+    margin-left: 25px;
+  }
+  .name {
+    position: absolute;
+    top: 40px;
+    margin-left: 25px;
+    font-size: 24px;
+    display: inline-block;
+    font-weight: 600;
+  }
+  .post-text {
+    padding: 20px;
+  }
+
+  .pst-btn {
+    padding: 25px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

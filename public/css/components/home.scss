@@ -1,0 +1,53 @@
+@import '../variables.scss';
+
+.home {
+  .hm-header {
+    .logo {
+      font-size: 24px;
+      line-height: 40px;
+      float: left;
+      margin: 1.2em 0 0 2.2em;
+      font-weight: bolder;
+    }
+    .hm-nav {
+      line-height: 40px;
+      margin: 1.2em;
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+      .hm-nav-itm {
+        list-style: none;
+        display: inline-block;
+        padding-right: 36px;
+      }
+    }
+  }
+
+  .side-strip {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -8em;
+    transform: rotate(90deg);
+    letter-spacing: 4px;
+  }
+
+  .overlay {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    top: 0%;
+
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      font-weight: bolder;
+      letter-spacing: 12px;
+    }
+  }
+}
