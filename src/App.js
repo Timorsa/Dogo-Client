@@ -11,9 +11,7 @@ const App = () => {
   return (
     <div className="App">
       <SideBar />
-      <div className="screen">
-        <Messenger />
-      </div>
+      <div className="screen"></div>
       <Notifications />
     </div>
   );

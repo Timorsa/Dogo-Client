@@ -5,17 +5,6 @@ const Notifications = () => {
   return (
     <div className="noti-cont">
       <div className="noti-header">Notifications</div>
-      <NotificationItem />
-      <NotificationItem />
-      <NotificationItem />
-      <NotificationItem />
-      <NotificationItem />
-      <NotificationItem />
-      <NotificationItem />
-
-      <NotificationItem />
-      <NotificationItem />
-      <NotificationItem />
     </div>
   );
 };

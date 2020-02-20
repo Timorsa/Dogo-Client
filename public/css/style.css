@@ -640,7 +640,7 @@ body::-webkit-scrollbar {
   box-shadow: 8px 8px 10px #d1d9e6, -3px -3px 10px #fafafa;
   display: flex;
   flex-direction: column;
-  height: 200vh; }
+  border-radius: 10px; }
   .msngr-cont .search {
     padding-top: 25px;
     display: flex;
@@ -661,13 +661,52 @@ body::-webkit-scrollbar {
       background-color: #ffffff; }
     .msngr-cont .search .search-btn {
       color: #3f4a4e;
-      margin-left: 35px;
+      margin-left: 5px;
       width: 75px;
       height: 75px;
       border: none;
       box-shadow: 8px 8px 10px #d1d9e6, -3px -3px 10px #fafafa; }
   .msngr-cont .search-btn:active {
     box-shadow: inset -3px -3px 7px #fafafa, inset 3px 3px 5px #d1d9e6; }
+  .msngr-cont .chat-room-list {
+    width: 90%;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column; }
+    .msngr-cont .chat-room-list .chat-room-item {
+      box-shadow: 8px 8px 10px #d1d9e6, -3px -3px 10px #fafafa;
+      padding: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      height: 105px;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      border-radius: 10px; }
+      .msngr-cont .chat-room-list .chat-room-item .avatar {
+        width: 85px;
+        height: 85px;
+        align-self: center;
+        background-size: cover;
+        border: 10px solid #ecf0f3;
+        box-shadow: 8px 8px 10px #d1d9e6, -3px -3px 10px #fafafa; }
+      .msngr-cont .chat-room-list .chat-room-item .item-stuff {
+        margin-top: 15px;
+        margin-left: 15px;
+        flex-grow: 1.5; }
+        .msngr-cont .chat-room-list .chat-room-item .item-stuff .user-info {
+          font-size: 24px;
+          line-height: 40px; }
+        .msngr-cont .chat-room-list .chat-room-item .item-stuff .last-msg {
+          font-size: 18px;
+          width: 80%;
+          display: inline;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+      .msngr-cont .chat-room-list .chat-room-item .time {
+        align-self: center; }
 
 * {
   outline: none; }
@@ -695,7 +734,8 @@ body::-webkit-scrollbar {
     position: relative;
     margin: 0 auto;
     right: 0;
-    width: 90%; }
+    width: 90%;
+    display: none; }
   .screen {
     margin: 100px auto;
     width: 80%; }

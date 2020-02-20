@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaSearch } from 'react-icons/fa/index';
+import ChatRoomItem from './ChatRoomItem';
 
 const Messenger = () => {
   return (
@@ -15,7 +16,15 @@ const Messenger = () => {
           <FaSearch size={24} />
         </button>
       </div>
-      <div className="chat-room-list"></div>
+      <div className="chat-room-list">
+        <ChatRoomItem />
+        <ChatRoomItem />
+        <ChatRoomItem />
+        <ChatRoomItem />
+        <ChatRoomItem />
+        <ChatRoomItem />
+        <ChatRoomItem />
+      </div>
     </div>
   );
 };
