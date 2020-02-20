@@ -18,8 +18,11 @@
     font-size: 24px;
     line-height: 70px;
     border-bottom: 0.1px #d1d9e6 solid;
-
+    background-color: $smokey;
+    position: sticky;
+    top: 0;
     flex-direction: column;
+    z-index: 2;
   }
   .noti-itm {
     height: 100px;

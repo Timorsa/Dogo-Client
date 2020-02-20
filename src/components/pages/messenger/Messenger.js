@@ -1,16 +1,23 @@
-import React from 'react'
-
+import React from 'react';
+import { FaSearch } from 'react-icons/fa/index';
 
 const Messenger = () => {
-    return (
-        <div className='messenger'>
-            <input type='text' name='search' className='feed-input' placeholder='need to write place holder...' />
-            <div className='chat-rooms-list'>
-                
-            </div>
-        </div>
-       
-    )
-}
+  return (
+    <div className="msngr-cont">
+      <div className="search">
+        <input
+          type="text"
+          name="search"
+          className="search-input"
+          placeholder="need to write place holder..."
+        />
+        <button className="search-btn round-obj">
+          <FaSearch size={24} />
+        </button>
+      </div>
+      <div className="chat-room-list"></div>
+    </div>
+  );
+};
 
-export default Messenger
+export default Messenger;
