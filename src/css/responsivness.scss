@@ -1,0 +1,61 @@
+@import './variables.scss';
+
+@media only screen and (max-width: 1000px) {
+  .app {
+    overflow-y: hidden;
+  }
+  .noti-cont {
+    position: relative;
+    margin: 0 auto;
+    right: 0;
+    width: 90%;
+    display: none;
+  }
+
+  .screen {
+    margin: 100px auto;
+    width: 100%;
+  }
+
+  .side-bar {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    height: 10vh;
+    bottom: 0;
+    .cover-pic-sb {
+      // display: none;
+      position: absolute;
+      width: 100%;
+      z-index: 10;
+      justify-self: flex-end;
+      top: -90vh;
+      height: 100px;
+      .profile-pic-sb {
+        height: 70px;
+        width: 70px;
+        margin: 15px auto;
+      }
+      .user-text {
+        display: none;
+      }
+    }
+    .nav {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+
+      .itm-mbl {
+        display: block;
+      }
+      .itm-bt {
+        display: none;
+      }
+      .nav-itm {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

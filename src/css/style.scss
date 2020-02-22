@@ -1,0 +1,14 @@
+@import './normalize.scss';
+
+//components
+@import './components/home.scss';
+@import './components/sideBar.scss';
+@import './components/feed.scss';
+@import './components/profile.scss';
+@import './components/notifications.scss';
+@import './components/settings.scss';
+@import './components/messenger.scss';
+@import './components/chat.scss';
+
+// responsivness mobile adjusments
+@import './responsivness.scss';

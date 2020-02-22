@@ -25,7 +25,7 @@
   "scripts": {
     "start": "concurrently \"npm run watch\" \"react-scripts start\"",
     "build": "react-scripts build",
-    "watch": "node-sass --watch public/css/style.scss public/css/style.css",
+    "watch": "node-sass --watch src/css/style.scss src/css/style.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

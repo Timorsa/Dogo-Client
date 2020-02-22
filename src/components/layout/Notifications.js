@@ -5,6 +5,7 @@ const Notifications = () => {
   return (
     <div className="noti-cont">
       <div className="noti-header">Notifications</div>
+      <NotificationItem />
     </div>
   );
 };

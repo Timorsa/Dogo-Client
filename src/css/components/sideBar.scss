@@ -1,0 +1,68 @@
+@import '../variables.scss';
+
+.side-bar {
+  position: fixed;
+  width: 22%;
+  min-width: 250px;
+  height: 100vh;
+  font-size: 24px;
+  line-height: 30px;
+  box-shadow: 5px 5px 17px #cdd2db;
+  transition: all 0.4s ease-in;
+  .cover-pic-sb {
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://img.freepik.com/free-vector/abstract-colorful-flow-shapes-background_23-2148258092.jpg?size=626&ext=jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+
+    .user-text {
+      position: relative;
+      font-size: 32px;
+      padding-left: 15px;
+      line-height: 40px;
+      text-align: center;
+      justify-self: center;
+    }
+    .profile-pic-sb {
+      height: 150px;
+      width: 150px;
+      background-image: url('https://www.biography.com/.image/t_share/MTY2MzU3Nzk2OTM2MjMwNTkx/elon_musk_royal_society.jpg');
+      background-position: center;
+      background-size: cover;
+      margin: 20px auto;
+    }
+  }
+  .nav {
+    background-color: #f7f7f7;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: $ash;
+    font-weight: 500;
+
+    .nav-itm {
+      padding: 25px;
+      list-style: none;
+      transition: all, 0.3s ease-in;
+    }
+
+    .nav-itm:hover {
+      background-color: #eeeeee;
+    }
+    .itm-mbl {
+      display: none;
+    }
+
+    .itm-bt {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+    }
+  }
+}
+.side-bar:hover {
+  box-shadow: 2px 2px 5px #d1d9e6;
+}

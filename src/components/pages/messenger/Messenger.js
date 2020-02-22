@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa/index';
 import ChatRoomItem from './ChatRoomItem';
 
@@ -17,7 +18,12 @@ const Messenger = () => {
         </button>
       </div>
       <div className="chat-room-list">
-        <ChatRoomItem />
+        <Link
+          to="/app/chat"
+          style={{ textDecoration: 'none', color: '#000000' }}
+        >
+          <ChatRoomItem />
+        </Link>
         <ChatRoomItem />
         <ChatRoomItem />
         <ChatRoomItem />

@@ -1,5 +1,5 @@
 new kursor({
-  type: 1,
+  type: 2,
   removeDefaultCursor: true,
-  color: '#000000'
+  color: '#000000
 });
