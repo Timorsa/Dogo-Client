@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { logout } from '../../actions/auth';
 import {
   MdPets,
   MdSettings,
@@ -9,7 +12,7 @@ import {
 } from 'react-icons/md/index';
 import { FaUserMd, FaListAlt } from 'react-icons/fa/index';
 
-const SideBar = () => {
+const SideBar = ({ auth: { user, isAuthenticated, loading }, logout }) => {
   const iconSize = 30;
   const icoStyle = {
     paddingRight: '20px',
@@ -76,10 +79,10 @@ const SideBar = () => {
             </Link>
           </li>
           <li className="nav-itm ">
-            <a href="/" className="link ash">
+            <Link href="/" className="link ash">
               <MdPets size={iconSize} style={icoStyle} />
               <span>Log Out</span>
-            </a>
+            </Link>
           </li>
         </div>
       </div>
@@ -87,4 +90,13 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+SideBar.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps, { logout })(SideBar);

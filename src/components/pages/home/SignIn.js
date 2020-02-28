@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { signin } from '../../../actions/auth';
+import { Redirect } from 'react-router-dom';
 
-const SignIn = () => {
+const SignIn = ({ signin, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -13,8 +17,14 @@ const SignIn = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    console.log('log-in');
+    signin(email, password);
   };
+
+  // Redirect if logged in
+  if (isAuthenticated) {
+    return <Redirect to="/app" />;
+  }
+
   return (
     <div className="sign-in">
       {/*all my inputs*/}
@@ -46,4 +56,13 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+SignIn.propTypes = {
+  signin: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { signin })(SignIn);

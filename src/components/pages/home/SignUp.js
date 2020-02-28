@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import Alert from '../../layout/Alert';
 import { setAlert } from '../../../actions/alerts';
 import { signup } from '../../../actions/auth';
+import { Redirect } from 'react-router-dom';
 
-const SignUp = ({ setAlert, signup }) => {
+const SignUp = ({ setAlert, signup, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     userName: '',
     firstName: '',
@@ -49,6 +50,10 @@ const SignUp = ({ setAlert, signup }) => {
       setAlert('Passwords fo not match', 'sign-up');
     }
   };
+
+  if (isAuthenticated) {
+    return <Redirect to="/app" />;
+  }
 
   return (
     <div className="sign-up">
@@ -137,7 +142,12 @@ const SignUp = ({ setAlert, signup }) => {
 
 SignUp.propTypes = {
   setAlert: PropTypes.func.isRequired,
-  signup: PropTypes.func.isRequired
+  signup: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
 };
 
-export default connect(null, { setAlert, signup })(SignUp);
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { setAlert, signup })(SignUp);
