@@ -9,13 +9,15 @@
   top: 10vh;
   text-align: center;
   .settings-opt {
+    display: block;
+    text-decoration: none;
+    color: $ash;
     margin: 25px;
     padding: 25px;
     font-size: 24px;
     border-radius: 15px;
     box-shadow: $pop-shdw;
-    transition: background-color 0.3s ease-in-out;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .settings-opt:active {
     box-shadow: $pop-shdw-press;

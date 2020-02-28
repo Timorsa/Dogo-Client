@@ -1,6 +1,9 @@
 import React from 'react';
 import Post from '../feed/Post';
 
+import { MdEvent } from 'react-icons/md/index';
+import { FaUserAlt, FaUserFriends } from 'react-icons/fa/index';
+
 const Profile = () => {
   return (
     <div className="profile">
@@ -8,7 +11,7 @@ const Profile = () => {
         className="header"
         style={{
           backgroundImage:
-            "url('https://img.freepik.com/free-vector/abstract-colorful-flow-shapes-background_23-2148258092.jpg?size=626&ext=jpg')"
+            "url('https://www.sightunseen.com/content/uploads/2016/07/Flat-Vernacular-Heavens-Wallpaper-opener3.jpg')"
         }}
       >
         <div
@@ -24,8 +27,20 @@ const Profile = () => {
         </div>
       </div>
       <div className="prof-menu">
-        <div className="following"></div>
-        <div className="followers"></div>
+        <div className="following prof-menu-itm">
+          <FaUserAlt className="prof-icon" />
+          <div className="flw-num">50</div>
+          <div className="itm-name">Following</div>
+        </div>
+        <div className="followers prof-menu-itm">
+          <FaUserFriends className="prof-icon" />
+          <div className="flw-num">50</div>
+          <div className="itm-name">Followers</div>
+        </div>
+        <div className="followers prof-menu-itm">
+          <MdEvent className="prof-icon" />
+          <div className="itm-name">Events</div>
+        </div>
       </div>
       <div className="posts">
         <Post />

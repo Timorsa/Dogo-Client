@@ -310,7 +310,9 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   overflow: -moz-scrollbars-none;
   background-color: #ecf0f3;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none; }
 
 body::-webkit-scrollbar {
   width: 0 !important; }
@@ -322,47 +324,283 @@ body::-webkit-scrollbar {
   margin: 0 auto;
   width: 50%; }
 
-.home .hm-header .logo {
-  font-size: 24px;
-  line-height: 40px;
-  float: left;
-  margin: 1.2em 0 0 2.2em;
-  font-weight: bolder; }
+.link {
+  text-decoration: none;
+  color: #000000; }
 
-.home .hm-header .hm-nav {
-  line-height: 40px;
-  margin: 1.2em;
-  position: absolute;
-  right: 0;
-  cursor: pointer; }
-  .home .hm-header .hm-nav .hm-nav-itm {
-    list-style: none;
-    display: inline-block;
-    padding-right: 36px; }
+.ash {
+  color: #3f4a4e; }
 
-.home .side-strip {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -8em;
-  transform: rotate(90deg);
-  letter-spacing: 4px; }
+.sign-up {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-up .sign-up-form .sign-up-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
 
-.home .overlay {
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background: #fff;
-  top: 0%; }
-  .home .overlay h1 {
+.sign-in {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-in .sign-in-form .sign-in-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.alert {
+  height: 100px;
+  width: 250px;
+  background-color: red;
+  color: #ecf0f3; }
+
+.home {
+  overflow-x: hidden; }
+  .home .top-sec {
+    height: 100vh;
+    width: 100%;
+    color: #ecf0f3;
+    background-image: url("http://getwallpapers.com/wallpaper/full/b/f/4/135915.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .home .hm-header .logo {
+    font-size: 24px;
+    line-height: 40px;
+    float: left;
+    margin: 1.2em 0 0 2.2em;
+    font-weight: bolder; }
+  .home .hm-header .hm-nav {
+    line-height: 40px;
+    margin: 1.2em;
+    position: absolute;
+    right: 0;
+    cursor: pointer; }
+    .home .hm-header .hm-nav .hm-nav-itm {
+      list-style: none;
+      display: inline-block;
+      padding-right: 36px; }
+  .home .side-strip {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    font-weight: bolder;
-    letter-spacing: 12px; }
+    transform: translateY(-50%);
+    right: -8em;
+    transform: rotate(90deg);
+    letter-spacing: 4px; }
+  .home .overlay {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    top: 0%; }
+    .home .overlay h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      font-weight: bolder;
+      letter-spacing: 12px; }
+  .home .login-form {
+    position: relative;
+    top: 20vh; }
+    .home .login-form .form-structor {
+      background-color: #222;
+      border-radius: 15px;
+      height: 650px;
+      width: 450px;
+      position: relative;
+      overflow: hidden; }
+      .home .login-form .form-structor::after {
+        content: '';
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("https://9ed48207422fa7fc5013-a6297eb5ec0f30e883355c8680f3b2d6.ssl.cf2.rackcdn.com/35585131450_6-20190322154216-20190322154226-1000x1000.jpg"); }
+      .home .login-form .form-structor .signup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 65%;
+        z-index: 5;
+        transition: all 0.3s ease; }
+        .home .login-form .form-structor .signup.slide-up {
+          top: 5%;
+          transform: translate(-50%, 0%);
+          transition: all 0.3s ease; }
+        .home .login-form .form-structor .signup.slide-up .form-holder,
+        .home .login-form .form-structor .signup.slide-up .submit-btn {
+          opacity: 0;
+          visibility: hidden; }
+        .home .login-form .form-structor .signup.slide-up .form-title {
+          font-size: 1em;
+          cursor: pointer; }
+        .home .login-form .form-structor .signup.slide-up .form-title span {
+          margin-right: 5px;
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s ease; }
+        .home .login-form .form-structor .signup .form-title {
+          color: #fff;
+          font-size: 1.7em;
+          text-align: center; }
+          .home .login-form .form-structor .signup .form-title span {
+            color: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease; }
+        .home .login-form .form-structor .signup .form-holder {
+          border-radius: 15px;
+          background-color: #fff;
+          overflow: hidden;
+          margin-top: 50px;
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s ease; }
+          .home .login-form .form-structor .signup .form-holder .input {
+            border: 0;
+            outline: none;
+            box-shadow: none;
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            padding: 8px 15px;
+            border-bottom: 1px solid #eee;
+            width: 100%;
+            font-size: 12px; }
+            .home .login-form .form-structor .signup .form-holder .input:last-child {
+              border-bottom: 0; }
+            .home .login-form .form-structor .signup .form-holder .input::-webkit-input-placeholder {
+              color: rgba(0, 0, 0, 0.4); }
+        .home .login-form .form-structor .signup .submit-btn {
+          background-color: rgba(0, 0, 0, 0.4);
+          color: rgba(255, 255, 255, 0.7);
+          border: 0;
+          border-radius: 15px;
+          display: block;
+          margin: 15px auto;
+          padding: 15px 45px;
+          width: 100%;
+          font-size: 13px;
+          font-weight: bold;
+          cursor: pointer;
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s ease; }
+          .home .login-form .form-structor .signup .submit-btn:hover {
+            transition: all 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.8); }
+      .home .login-form .form-structor .login {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 5;
+        transition: all 0.3s ease; }
+        .home .login-form .form-structor .login::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: -20px;
+          transform: translate(-50%, 0);
+          background-color: #fff;
+          width: 200%;
+          height: 250px;
+          border-radius: 50%;
+          z-index: 4;
+          transition: all 0.3s ease; }
+        .home .login-form .form-structor .login .center {
+          position: absolute;
+          top: calc(50% - 10%);
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 65%;
+          z-index: 5;
+          transition: all 0.3s ease; }
+          .home .login-form .form-structor .login .center .form-title {
+            color: #000;
+            font-size: 1.7em;
+            text-align: center; }
+            .home .login-form .form-structor .login .center .form-title span {
+              color: rgba(0, 0, 0, 0.4);
+              opacity: 0;
+              visibility: hidden;
+              transition: all 0.3s ease; }
+          .home .login-form .form-structor .login .center .form-holder {
+            border-radius: 15px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            overflow: hidden;
+            margin-top: 50px;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s ease; }
+            .home .login-form .form-structor .login .center .form-holder .input {
+              border: 0;
+              outline: none;
+              box-shadow: none;
+              display: block;
+              height: 30px;
+              line-height: 30px;
+              padding: 8px 15px;
+              border-bottom: 1px solid #eee;
+              width: 100%;
+              font-size: 12px; }
+              .home .login-form .form-structor .login .center .form-holder .input:last-child {
+                border-bottom: 0; }
+              .home .login-form .form-structor .login .center .form-holder .input::-webkit-input-placeholder {
+                color: rgba(0, 0, 0, 0.4); }
+          .home .login-form .form-structor .login .center .submit-btn {
+            background-color: #6b92a4;
+            color: rgba(255, 255, 255, 0.7);
+            border: 0;
+            border-radius: 15px;
+            display: block;
+            margin: 15px auto;
+            padding: 15px 45px;
+            width: 100%;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s ease; }
+            .home .login-form .form-structor .login .center .submit-btn:hover {
+              transition: all 0.3s ease;
+              background-color: rgba(0, 0, 0, 0.8); }
+        .home .login-form .form-structor .login.slide-up {
+          top: 90%;
+          transition: all 0.3s ease; }
+        .home .login-form .form-structor .login.slide-up .center {
+          top: 10%;
+          transform: translate(-50%, 0%);
+          transition: all 0.3s ease; }
+        .home .login-form .form-structor .login.slide-up .form-holder,
+        .home .login-form .form-structor .login.slide-up .submit-btn {
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease; }
+        .home .login-form .form-structor .login.slide-up .form-title {
+          font-size: 1em;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+          transition: all 0.3s ease; }
+        .home .login-form .form-structor .login.slide-up .form-title span {
+          margin-right: 5px;
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.3s ease; }
 
 * {
   outline: none; }
@@ -371,7 +609,9 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   overflow: -moz-scrollbars-none;
   background-color: #ecf0f3;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none; }
 
 body::-webkit-scrollbar {
   width: 0 !important; }
@@ -382,6 +622,37 @@ body::-webkit-scrollbar {
 .screen {
   margin: 0 auto;
   width: 50%; }
+
+.link {
+  text-decoration: none;
+  color: #000000; }
+
+.ash {
+  color: #3f4a4e; }
+
+.sign-up {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-up .sign-up-form .sign-up-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.sign-in {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-in .sign-in-form .sign-in-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.alert {
+  height: 100px;
+  width: 250px;
+  background-color: red;
+  color: #ecf0f3; }
 
 .side-bar {
   position: fixed;
@@ -395,7 +666,7 @@ body::-webkit-scrollbar {
   .side-bar .cover-pic-sb {
     display: flex;
     flex-direction: column;
-    background-image: url("https://img.freepik.com/free-vector/abstract-colorful-flow-shapes-background_23-2148258092.jpg?size=626&ext=jpg");
+    background-image: url("https://i.pinimg.com/474x/82/b9/f0/82b9f0708700dc3a5b935ac773bcba51.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -410,7 +681,7 @@ body::-webkit-scrollbar {
     .side-bar .cover-pic-sb .profile-pic-sb {
       height: 150px;
       width: 150px;
-      background-image: url("https://www.biography.com/.image/t_share/MTY2MzU3Nzk2OTM2MjMwNTkx/elon_musk_royal_society.jpg");
+      background-image: url("https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png");
       background-position: center;
       background-size: cover;
       margin: 20px auto; }
@@ -519,7 +790,9 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   overflow: -moz-scrollbars-none;
   background-color: #ecf0f3;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none; }
 
 body::-webkit-scrollbar {
   width: 0 !important; }
@@ -531,20 +804,93 @@ body::-webkit-scrollbar {
   margin: 0 auto;
   width: 50%; }
 
+.link {
+  text-decoration: none;
+  color: #000000; }
+
+.ash {
+  color: #3f4a4e; }
+
+.sign-up {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-up .sign-up-form .sign-up-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.sign-in {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-in .sign-in-form .sign-in-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.alert {
+  height: 100px;
+  width: 250px;
+  background-color: red;
+  color: #ecf0f3; }
+
 .profile {
-  margin: 30px auto;
-  padding: 15px;
-  width: 90%;
-  background-color: #fff;
-  border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
-  box-shadow: 8px 8px 10px #d1d9e6, -3px -3px 10px #fafafa; }
+  color: #3f4a4e; }
   .profile .header {
-    border-top-left-radius: 150px;
-    border-top-right-radius: 150px;
-    height: 30vh;
+    height: 200px;
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    display: flex; }
+    .profile .header .avatar {
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 15px solid #ecf0f3;
+      box-shadow: 5px 5px 17px #cdd2db;
+      height: 150px;
+      width: 150px;
+      position: relative;
+      top: 50px;
+      left: 70px; }
+    .profile .header .info {
+      font-size: 28px;
+      align-self: center;
+      position: relative;
+      font-weight: 700;
+      left: 95px;
+      top: 55px; }
+  .profile .prof-menu {
+    height: 100px;
+    width: 100%;
+    background-color: #ecf0f3;
+    transition: all 0.4s ease-in;
+    box-shadow: 5px 5px 17px #cdd2db;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: flex-end; }
+    .profile .prof-menu .prof-menu-itm {
+      height: 100px;
+      width: 20%;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      font-size: 1.5rem;
+      line-height: 2rem; }
+      .profile .prof-menu .prof-menu-itm .prof-icon {
+        font-size: 3rem;
+        height: 100vh;
+        align-self: center;
+        justify-self: center; }
+      .profile .prof-menu .prof-menu-itm .flw-num {
+        margin-top: 10px;
+        padding-top: 16px;
+        font-size: 2rem; }
+    .profile .prof-menu .prof-menu-itm:hover {
+      background-color: #eee; }
+  .profile .prof-menu:hover {
+    box-shadow: 2px 2px 5px #d1d9e6; }
   .profile .posts {
     width: 50%; }
 
@@ -555,7 +901,9 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   overflow: -moz-scrollbars-none;
   background-color: #ecf0f3;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none; }
 
 body::-webkit-scrollbar {
   width: 0 !important; }
@@ -566,6 +914,37 @@ body::-webkit-scrollbar {
 .screen {
   margin: 0 auto;
   width: 50%; }
+
+.link {
+  text-decoration: none;
+  color: #000000; }
+
+.ash {
+  color: #3f4a4e; }
+
+.sign-up {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-up .sign-up-form .sign-up-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.sign-in {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-in .sign-in-form .sign-in-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.alert {
+  height: 100px;
+  width: 250px;
+  background-color: red;
+  color: #ecf0f3; }
 
 .noti-cont {
   width: 20%;
@@ -620,7 +999,9 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   overflow: -moz-scrollbars-none;
   background-color: #ecf0f3;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none; }
 
 body::-webkit-scrollbar {
   width: 0 !important; }
@@ -632,6 +1013,37 @@ body::-webkit-scrollbar {
   margin: 0 auto;
   width: 50%; }
 
+.link {
+  text-decoration: none;
+  color: #000000; }
+
+.ash {
+  color: #3f4a4e; }
+
+.sign-up {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-up .sign-up-form .sign-up-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.sign-in {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-in .sign-in-form .sign-in-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.alert {
+  height: 100px;
+  width: 250px;
+  background-color: red;
+  color: #ecf0f3; }
+
 .settings {
   width: 90%;
   padding: 25px;
@@ -641,13 +1053,15 @@ body::-webkit-scrollbar {
   top: 10vh;
   text-align: center; }
   .settings .settings-opt {
+    display: block;
+    text-decoration: none;
+    color: #3f4a4e;
     margin: 25px;
     padding: 25px;
     font-size: 24px;
     border-radius: 15px;
     box-shadow: 8px 8px 10px #d1d9e6, -3px -3px 10px #fafafa;
-    transition: background-color 0.3s ease-in-out;
-    transition: box-shadow 0.3s ease-in-out; }
+    transition: all 0.3s ease-in-out; }
   .settings .settings-opt:active {
     box-shadow: inset -3px -3px 7px #fafafa, inset 3px 3px 5px #d1d9e6; }
   .settings .danger:hover {
@@ -663,7 +1077,9 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   overflow: -moz-scrollbars-none;
   background-color: #ecf0f3;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none; }
 
 body::-webkit-scrollbar {
   width: 0 !important; }
@@ -674,6 +1090,37 @@ body::-webkit-scrollbar {
 .screen {
   margin: 0 auto;
   width: 50%; }
+
+.link {
+  text-decoration: none;
+  color: #000000; }
+
+.ash {
+  color: #3f4a4e; }
+
+.sign-up {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-up .sign-up-form .sign-up-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.sign-in {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-in .sign-in-form .sign-in-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.alert {
+  height: 100px;
+  width: 250px;
+  background-color: red;
+  color: #ecf0f3; }
 
 .msngr-cont {
   margin: 0 auto;
@@ -769,7 +1216,9 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   overflow: -moz-scrollbars-none;
   background-color: #ecf0f3;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none; }
 
 body::-webkit-scrollbar {
   width: 0 !important; }
@@ -780,6 +1229,37 @@ body::-webkit-scrollbar {
 .screen {
   margin: 0 auto;
   width: 50%; }
+
+.link {
+  text-decoration: none;
+  color: #000000; }
+
+.ash {
+  color: #3f4a4e; }
+
+.sign-up {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-up .sign-up-form .sign-up-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.sign-in {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-in .sign-in-form .sign-in-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.alert {
+  height: 100px;
+  width: 250px;
+  background-color: red;
+  color: #ecf0f3; }
 
 .chat {
   width: 100%;
@@ -893,7 +1373,9 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   overflow: -moz-scrollbars-none;
   background-color: #ecf0f3;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none; }
 
 body::-webkit-scrollbar {
   width: 0 !important; }
@@ -904,6 +1386,37 @@ body::-webkit-scrollbar {
 .screen {
   margin: 0 auto;
   width: 50%; }
+
+.link {
+  text-decoration: none;
+  color: #000000; }
+
+.ash {
+  color: #3f4a4e; }
+
+.sign-up {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-up .sign-up-form .sign-up-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.sign-in {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+  .sign-in .sign-in-form .sign-in-input {
+    padding: 20px;
+    margin: 20px;
+    display: block; }
+
+.alert {
+  height: 100px;
+  width: 250px;
+  background-color: red;
+  color: #ecf0f3; }
 
 @media only screen and (max-width: 1000px) {
   .app {

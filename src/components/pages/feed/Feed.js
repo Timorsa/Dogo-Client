@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './Post';
+import axios from 'axios';
 
 const Feed = () => {
   return (
@@ -13,7 +14,9 @@ const Feed = () => {
       <button className="post-btn">Post</button>
       <Post />
       <Post />
+
       <Post />
+
       <Post />
       <Post />
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FaRegThumbsUp, FaRegListAlt } from 'react-icons/fa';
 const Post = () => {
   return (
     <div className="post">
@@ -19,8 +19,12 @@ const Post = () => {
         infancy. Various versions have evolved over the years, sometimes by
         accident, sometimes on purpose (injected humour and the like).
       </p>
-      <botton className="pst-btn pst-comment">Comment</botton>
-      <botton className="pst-btn pst-comment">Like</botton>
+      <botton className="pst-btn pst-comment">
+        <FaRegThumbsUp /> Like
+      </botton>
+      <botton className="pst-btn pst-comment">
+        <FaRegListAlt /> Comment
+      </botton>
     </div>
   );
 };

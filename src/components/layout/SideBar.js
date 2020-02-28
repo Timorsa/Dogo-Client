@@ -21,10 +21,7 @@ const SideBar = () => {
 
   return (
     <div className="side-bar">
-      <Link
-        to="/app/profile"
-        style={{ textDecoration: 'none', color: ' #000000' }}
-      >
+      <Link to="/app/profile" className="link">
         <div className="cover-pic-sb">
           <div className="profile-pic-sb round-obj"></div>
           <div className="user-text">
@@ -36,68 +33,53 @@ const SideBar = () => {
 
       <div className="nav">
         <li className="nav-itm">
-          <Link
-            to="/app/feed"
-            style={{ textDecoration: 'none', color: ' #3f4a4e' }}
-          >
+          <Link to="/app/feed" className="link ash">
             <FaListAlt size={iconSize} style={icoStyle} />
             <span>News Feed</span>
           </Link>
         </li>
         <li className="nav-itm">
-          <Link
-            to="/app/messenger"
-            style={{ textDecoration: 'none', color: ' #3f4a4e' }}
-          >
+          <Link to="/app/messenger" className="link ash">
             <MdChatBubble size={iconSize} style={icoStyle} />
             <span>Messenger</span>
           </Link>
         </li>
         <li className="nav-itm">
-          <Link
-            to="/app/events"
-            style={{ textDecoration: 'none', color: ' #3f4a4e' }}
-          >
+          <Link to="/app/events" className="link ash">
             <MdEvent size={iconSize} style={icoStyle} />
             <span>Events</span>
           </Link>
         </li>
         <li className="nav-itm itm-mbl">
-          <Link
-            to="/app/events"
-            style={{ textDecoration: 'none', color: ' #3f4a4e' }}
-          >
+          <Link to="/app/events" className="link ash">
             <MdNotifications size={iconSize} style={icoStyle} />
             <span>notification</span>
           </Link>
         </li>
         <li className="nav-itm">
-          <Link
-            to="/app/vet"
-            style={{ textDecoration: 'none', color: ' #3f4a4e' }}
-          >
+          <Link to="/app/vet" className="link ash">
             <FaUserMd size={iconSize} style={icoStyle} />
             <span>Vetrinary</span>
           </Link>
         </li>
         <div className="itm-bt">
           <li className="nav-itm ">
-            <Link
-              to="/app/settings"
-              style={{ textDecoration: 'none', color: ' #3f4a4e' }}
-            >
+            <Link to="/app/settings" className="link ash">
               <MdSettings size={iconSize} style={icoStyle} />
               <span>Settings</span>
             </Link>
           </li>
           <li className="nav-itm ">
-            <Link
-              to="/app/pets"
-              style={{ textDecoration: 'none', color: ' #3f4a4e' }}
-            >
+            <Link to="/app/pets" className="link ash">
               <MdPets size={iconSize} style={icoStyle} />
               <span>Manage Pets</span>
             </Link>
+          </li>
+          <li className="nav-itm ">
+            <a href="/" className="link ash">
+              <MdPets size={iconSize} style={icoStyle} />
+              <span>Log Out</span>
+            </a>
           </li>
         </div>
       </div>

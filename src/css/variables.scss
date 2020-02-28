@@ -16,6 +16,8 @@ body {
   overflow: -moz-scrollbars-none;
   background-color: $smokey;
   scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none;
 }
 
 body::-webkit-scrollbar {
@@ -31,4 +33,48 @@ body::-webkit-scrollbar {
   // top: 15px;
   margin: 0 auto;
   width: 50%;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.ash {
+  color: #3f4a4e;
+}
+
+// for dev porpuses delete later
+
+.sign-up {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  .sign-up-form {
+    .sign-up-input {
+      padding: 20px;
+      margin: 20px;
+      display: block;
+    }
+  }
+}
+
+.sign-in {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  .sign-in-form {
+    .sign-in-input {
+      padding: 20px;
+      margin: 20px;
+      display: block;
+    }
+  }
+}
+
+.alert {
+  height: 100px;
+  width: 250px;
+  background-color: red;
+  color: $smokey;
 }
