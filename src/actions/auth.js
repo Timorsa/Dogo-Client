@@ -49,8 +49,6 @@ export const signup = newUser => async dispatch => {
       payload: res.data
     });
 
-    console.log(res);
-
     dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;

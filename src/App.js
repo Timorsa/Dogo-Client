@@ -16,18 +16,24 @@ import SideBar from './components/layout/SideBar';
 import Chat from './components/pages/messenger/Chat';
 import Profile from './components/pages/profile/Profile';
 import Settings from './components/pages/settings/Settings';
+import Events from './components/pages/events/Events';
 import Notifications from './components/layout/Notifications';
 import Messenger from './components/pages/messenger/Messenger';
 
+import kursor from 'kursor'
 import './css/style.css';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 
+
+
 const App = () => {
   useEffect(() => {
     store.dispatch(loadUser);
+    
+
   }, []);
 
   return (
@@ -42,7 +48,7 @@ const App = () => {
               <div className="screen">
                 <Switch>
                   <Route exact path="/app/feed" component={Feed} />
-                  <Route exact path="/app/feed" component={Feed} />
+                  <Route exact path="/app/events" component={Events} />
                   <Route exact path="/app/chat" component={Chat} />
                   <Route exact path="/app/settings" component={Settings} />
                   <Route exact path="/app/messenger" component={Messenger} />

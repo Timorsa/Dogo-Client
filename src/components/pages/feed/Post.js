@@ -1,32 +1,70 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { addLike, removeLike } from '../../../actions/post';
 import { FaRegThumbsUp, FaRegListAlt } from 'react-icons/fa';
-const Post = () => {
+import { MdDeleteForever } from 'react-icons/md/index';
+import Moment from 'react-moment';
+
+const Post = ({
+  auth,
+  addLike,
+  removeLike,
+  post: { _id, content, publisher, time, comments, bones, loading }
+}) => {
+  const { firstName, lastName, profilePicture } = publisher;
+
   return (
     <div className="post">
       <div className="post-user">
-        <div className="pst-usr-avatar round-obj" />
-        <div className="name">Elon Fusk</div>
-        <div className="pst-time">2 mins</div>
+        <div
+          className="pst-usr-avatar round-obj"
+          style={{ backgroundImage: `url(${profilePicture})` }}
+        />
+        <div className="name">
+          {firstName} {lastName}
+        </div>
+        <div className="pst-time">
+          <Moment fromNow>{time}</Moment>
+        </div>
       </div>
-      <p className="post-text">
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here', making it
-        look like readable English. Many desktop publishing packages and web
-        page editors now use Lorem Ipsum as their default model text, and a
-        search for 'lorem ipsum' will uncover many web sites still in their
-        infancy. Various versions have evolved over the years, sometimes by
-        accident, sometimes on purpose (injected humour and the like).
-      </p>
-      <botton className="pst-btn pst-comment">
-        <FaRegThumbsUp /> Like
-      </botton>
-      <botton className="pst-btn pst-comment">
-        <FaRegListAlt /> Comment
-      </botton>
+      <p className="post-text">{content}</p>
+      <button
+        className="pst-btn pst-like"
+        onClick={e =>
+          bones.includes(auth.user._id)
+            ? removeLike(_id, auth.user._id)
+            : addLike(_id, auth.user._id)
+        }
+      >
+        <FaRegThumbsUp
+          style={{
+            color: `${
+              bones.includes(auth.user._id) && !loading ? '#fff' : '#fce5de'
+            }`
+          }}
+        />{' '}
+        {bones.length} Like
+      </button>
+      <button className="pst-btn pst-comment">
+        <FaRegListAlt /> {comments.length} Comment
+      </button>
+      {!auth.loading && auth.user._id === publisher._id && (
+        <button className="pst-btn pst-comment">
+          <MdDeleteForever /> Delete
+        </button>
+      )}
     </div>
   );
 };
 
-export default Post;
+Post.protoTypes = {
+  post: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps, { addLike, removeLike })(Post);

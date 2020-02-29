@@ -71,6 +71,7 @@
       margin-bottom: 25px;
       border-radius: 10px;
       overflow: hidden;
+      transition: all .4s;
       .avatar {
         width: 85px;
         height: 85px;
@@ -99,10 +100,15 @@
         }
       }
 
+  
       .time {
         align-self: center;
         z-index: 2;
       }
     }
+    .chat-room-item:hover {
+      background-color: #fafafa;
+    }
+
   }
 }

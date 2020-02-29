@@ -9,10 +9,11 @@
   right: 25px;
   border-radius: 2.5%;
   box-shadow: $pop-shdw;
+  background-color: $smokey;
   transition: all 0.5s ease-in;
   overflow-y: auto;
   overflow: -moz-scrollbars-none;
-
+  opacity: 0;
   .noti-header {
     text-align: center;
     font-size: 24px;
@@ -21,6 +22,7 @@
     background-color: $smokey;
     position: sticky;
     top: 0;
+    opacity: 0;
     flex-direction: column;
     z-index: 2;
   }
